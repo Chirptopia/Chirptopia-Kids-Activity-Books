@@ -86,7 +86,7 @@ header{position:sticky;top:0;z-index:40;background:rgba(255,250,241,.92);backdro
         <div class="check"><div>Great for independent or family activities</div><div>Clear, print-friendly page layouts</div><div>A mix of learning, play and creativity</div><div>Designed for screen-free routines</div></div>
         <div class="price">$12.99</div><div class="priceNote">Current display price — update before launch if needed.</div>
         <div class="buyRow"><button class="btn primary" id="buy">Add to Cart — Start the Adventure</button></div>
-        <div class="miniTrust"><span class="pill">Digital product</span><span class="pill">Checkout ready for integration</span><span class="pill">No payment connected yet</span></div>
+        <div class="miniTrust"><span class="pill">Digital product</span><span class="pill" id="checkoutStatus">Checkout setup in progress</span></div>
       </div>
     </div>
   </div>
@@ -149,12 +149,15 @@ header{position:sticky;top:0;z-index:40;background:rgba(255,250,241,.92);backdro
 
 <div class="modalBack" id="cartModal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><div class="modalHead"><h2 id="cartTitle">Your Cart</h2><button class="close" data-close aria-label="Close">×</button></div><div id="cartContent"></div></div></div>
 
-<div class="modalBack" id="checkoutModal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><div class="modalHead"><h2 id="checkoutTitle">Checkout</h2><button class="close" data-close aria-label="Close">×</button></div><div class="notice warn"><b>Payment is not connected yet.</b><br>The storefront is ready for checkout integration, but real orders and automatic digital delivery are not enabled until a payment provider is connected.</div><br><form class="form" id="checkoutForm"><label>Full name<input required name="name" autocomplete="name"></label><label>Email address<input required type="email" name="email" autocomplete="email"></label><label>Country<input required name="country" autocomplete="country-name"></label><button class="btn primary" type="submit">Continue to Payment</button></form></div></div>
+<div class="modalBack" id="checkoutModal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><div class="modalHead"><h2 id="checkoutTitle">Checkout</h2><button class="close" data-close aria-label="Close">×</button></div><div class="notice warn" id="checkoutNotice"><b>Payment setup is not finished.</b><br>Connect the Lemon Squeezy checkout URL in the site configuration before accepting real orders.</div><br><form class="form" id="checkoutForm"><label>Full name<input required name="name" autocomplete="name"></label><label>Email address<input required type="email" name="email" autocomplete="email"></label><label>Country<input required name="country" autocomplete="country-name"></label><button class="btn primary" type="submit">Continue to Payment</button></form></div></div>
 
 <div class="modalBack" id="reviewModal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="reviewTitle"><div class="modalHead"><h2 id="reviewTitle">Share Your Experience</h2><button class="close" data-close aria-label="Close">×</button></div><p class="muted">Purchased the book? Tell other parents what your child enjoyed. Reviews are moderated before appearing publicly.</p><form class="reviewForm" id="reviewForm"><label>Your name<input required name="name" maxlength="80" autocomplete="name" placeholder="e.g. Sarah"></label><label>Order number <span class="muted">(used later to verify your purchase)</span><input name="order_number" maxlength="80" placeholder="e.g. CH-12345"></label><div><b>Your rating</b><div class="ratingPicker" id="ratingPicker" aria-label="Rating"><button type="button" data-rating="1" aria-label="1 star">★</button><button type="button" data-rating="2" aria-label="2 stars">★</button><button type="button" data-rating="3" aria-label="3 stars">★</button><button type="button" data-rating="4" aria-label="4 stars">★</button><button type="button" data-rating="5" aria-label="5 stars">★</button></div><input type="hidden" id="ratingValue" name="rating" value="5"></div><label>Your review<textarea required name="review" maxlength="800" placeholder="What did your child enjoy?"></textarea></label><button class="btn primary" type="submit">Submit Review</button><div class="notice">Your review will be published only after moderation. A verified-purchase badge is added only after the order is confirmed.</div></form></div></div>
 
 <script>
 const PRICE=12.99;
+// Paste the published Lemon Squeezy checkout URL here when your product is ready.
+// Example: https://your-store.lemonsqueezy.com/checkout/buy/VARIANT_ID
+const CHECKOUT_URL="";
 let qty=Number(localStorage.getItem("chirptopia_cart_qty")||0);
 const REVIEWS_CONFIG={supabaseUrl:"",supabaseAnonKey:"",table:"reviews"};
 const $=s=>document.querySelector(s);
@@ -169,13 +172,42 @@ function renderCart(){
 function changeQty(n){qty=Math.max(0,qty+n);saveCart();renderCart()}
 function add(){qty++;saveCart();toastMsg("Added to cart 🛒")}
 function openCart(){renderCart();cartModal.classList.add("open");cartModal.setAttribute("aria-hidden","false");document.body.classList.add("lock")}
-function openCheckout(){if(!qty){toastMsg("Add the book to your cart first");return}cartModal.classList.remove("open");checkoutModal.classList.add("open");checkoutModal.setAttribute("aria-hidden","false")}
+function openCheckout(){if(!qty){toastMsg("Add the book to your cart first");return}cartModal.classList.remove("open");checkoutModal.classList.add("open");checkoutModal.setAttribute("aria-hidden","false");updateCheckoutUI()}
 function closeAll(){document.querySelectorAll(".modalBack").forEach(m=>{m.classList.remove("open");m.setAttribute("aria-hidden","true")});document.body.classList.remove("lock")}
 function bindClose(){document.querySelectorAll("[data-close]").forEach(x=>x.onclick=closeAll)}
 $("#buy").onclick=add;$("#ctaBuy").onclick=()=>{add();location.hash="book"};$("#cartBtn").onclick=openCart;bindClose();
 document.querySelectorAll(".modalBack").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)closeAll()}));
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
-$("#checkoutForm").addEventListener("submit",e=>{e.preventDefault();toastMsg("Payment is not connected yet.");setTimeout(closeAll,900)});
+function updateCheckoutUI(){
+ const ready=Boolean(CHECKOUT_URL);
+ const notice=$("#checkoutNotice");
+ const status=$("#checkoutStatus");
+ if(ready){
+   notice.className="notice";
+   notice.innerHTML="<b>Secure checkout is ready.</b><br>You’ll continue to Lemon Squeezy to complete payment and receive the digital product.";
+   status.textContent="Secure checkout enabled";
+ }else{
+   notice.className="notice warn";
+   notice.innerHTML="<b>Payment setup is not finished.</b><br>Connect the Lemon Squeezy checkout URL in the site configuration before accepting real orders.";
+   status.textContent="Checkout setup in progress";
+ }
+}
+function buildCheckoutUrl(form){
+ const url=new URL(CHECKOUT_URL);
+ const data=new FormData(form);
+ const email=String(data.get("email")||"").trim();
+ const name=String(data.get("name")||"").trim();
+ const country=String(data.get("country")||"").trim();
+ if(email)url.searchParams.set("checkout[email]",email);
+ if(name)url.searchParams.set("checkout[name]",name);
+ if(country)url.searchParams.set("checkout[billing_address][country]",country);
+ return url.toString();
+}
+$("#checkoutForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(!CHECKOUT_URL){toastMsg("Checkout is not connected yet.");return}
+ window.location.href=buildCheckoutUrl(e.target);
+});
 menuBtn.onclick=()=>{const open=mobileMenu.classList.toggle("open");menuBtn.setAttribute("aria-expanded",String(open));menuBtn.textContent=open?"×":"☰"};
 mobileMenu.querySelectorAll("a").forEach(a=>a.onclick=()=>{mobileMenu.classList.remove("open");menuBtn.setAttribute("aria-expanded","false");menuBtn.textContent="☰"});
 
@@ -200,6 +232,7 @@ $("#reviewForm").addEventListener("submit",async e=>{
  try{const url=REVIEWS_CONFIG.supabaseUrl.replace(/\/$/,"")+"/rest/v1/"+REVIEWS_CONFIG.table;const res=await fetch(url,{method:"POST",headers:{apikey:REVIEWS_CONFIG.supabaseAnonKey,Authorization:"Bearer "+REVIEWS_CONFIG.supabaseAnonKey,"Content-Type":"application/json","Prefer":"return=minimal"},body:JSON.stringify(payload)});if(!res.ok)throw new Error("submit failed");e.target.reset();$("#ratingValue").value=5;document.querySelectorAll("#ratingPicker button").forEach(b=>b.classList.add("active"));closeAll();toastMsg("Thank you! Your review was submitted for moderation.");loadReviews()}catch(err){toastMsg("We couldn't submit the review. Please try again.")}});
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.08});
 document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+updateCheckoutUI();
 loadReviews();
 </script>
 </body>
