@@ -3,237 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Chirptopia creates playful, screen-free kids activity books filled with coloring, puzzles, matching, letters and creative challenges.">
-<meta name="theme-color" content="#18344f">
-<meta name="robots" content="index,follow">
+<meta name="description" content="Chirptopia — premium screen-free activity books for curious kids.">
+<meta name="theme-color" content="#090a0f">
 <meta property="og:title" content="Chirptopia | Kids Activity Books">
-<meta property="og:description" content="Screen-free activities that turn ordinary moments into real-world adventures.">
+<meta property="og:description" content="Screen-free adventures, redesigned for curious minds.">
 <meta property="og:type" content="website">
-<title>Chirptopia | Kids Activity Books</title>
+<title>Chirptopia — Screen-Free Adventures</title>
 <style>
-:root{--ink:#18344f;--ink2:#254b68;--muted:#687b8d;--cream:#fffaf1;--paper:#fff;--yellow:#ffd85f;--yellow2:#ffeaa7;--mint:#bfe9d2;--mint2:#eaf8f0;--sky:#cfe9ff;--sky2:#eef8ff;--coral:#ef735e;--coral2:#fff0ec;--line:#e5eaee;--soft:#f5f7f8;--shadow:0 22px 60px rgba(24,52,79,.12);--shadow2:0 10px 30px rgba(24,52,79,.08);--r:24px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}body.lock{overflow:hidden}a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}button{cursor:pointer}.container{width:min(1160px,92%);margin:auto}
-.skip{position:absolute;left:-999px;top:10px;background:#fff;padding:10px 14px;border-radius:10px;z-index:200}.skip:focus{left:10px}
-.announcement{background:var(--ink);color:#fff;text-align:center;padding:8px 14px;font-size:.82rem;font-weight:800;letter-spacing:.01em}
-header{position:sticky;top:0;z-index:40;background:rgba(255,250,241,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-weight:950;font-size:1.02rem;white-space:nowrap}.logo{width:42px;height:42px;border-radius:14px;background:var(--yellow);display:grid;place-items:center;font-size:21px;box-shadow:0 5px 0 #e7bd45}.navlinks{display:flex;gap:22px;font-weight:800;color:#50677b}.navlinks a:hover{color:var(--coral)}.navActions{display:flex;gap:8px;align-items:center}.cartBtn,.menuBtn{border:0;border-radius:14px;padding:11px 15px;font-weight:900}.cartBtn{background:var(--ink);color:#fff;box-shadow:0 8px 18px rgba(24,52,79,.15)}.menuBtn{display:none;background:#fff;border:1px solid var(--line)}
-.mobileMenu{display:none;border-top:1px solid var(--line);padding:10px 0 16px}.mobileMenu.open{display:block}.mobileMenu a{display:block;padding:11px 4px;font-weight:850}
-.hero{padding:74px 0 52px;overflow:hidden}.heroGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:999px;background:var(--sky2);border:1px solid #d9ecfb;color:#3575a5;font-weight:850;font-size:.88rem}.hero h1{font-size:clamp(2.8rem,5.7vw,5.35rem);line-height:.99;letter-spacing:-.045em;margin:18px 0 20px}.hero h1 span{color:var(--coral)}.hero p{font-size:1.15rem;color:var(--muted);max-width:640px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:27px}.btn{border:0;border-radius:15px;padding:14px 20px;font-weight:900;display:inline-flex;justify-content:center;align-items:center;gap:8px;transition:transform .18s,box-shadow .18s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--ink);color:#fff;box-shadow:0 12px 28px rgba(24,52,79,.2)}.secondary{background:#fff;border:1px solid var(--line);color:var(--ink)}.trustRow{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;color:#50667b;font-size:.9rem;font-weight:750}.trustRow span{display:flex;align-items:center;gap:6px}
-.heroArt{min-height:470px;position:relative;display:grid;place-items:center}.blob{position:absolute;width:88%;height:82%;background:var(--mint);border-radius:46% 54% 58% 42%/42% 45% 55% 58%;transform:rotate(-6deg)}.book{position:relative;width:min(330px,72%);aspect-ratio:3/4;background:#fff;border:10px solid #fff;border-radius:16px;box-shadow:var(--shadow);overflow:hidden;transform:rotate(4deg)}.bookTop{height:35%;background:var(--sky);padding:23px 15px;text-align:center;font-weight:950;font-size:1.2rem;line-height:1.12}.bookTop small{font-size:.72rem;letter-spacing:.08em}.bookBody{height:65%;display:grid;place-items:center;background:#fffaf4;position:relative}.bookBody:after{content:"COLOR • SOLVE • CREATE";position:absolute;bottom:22px;font-size:.66rem;letter-spacing:.14em;font-weight:950;color:#587083}.bookAnimal{font-size:7rem}.sticker{position:absolute;background:#fff;padding:10px 14px;border-radius:15px;box-shadow:var(--shadow2);font-weight:900}.s1{top:8%;right:0}.s2{bottom:7%;left:0;background:var(--yellow)}
-.section{padding:76px 0}.section.alt{background:#f7f8f6}.sectionHead{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:30px}.sectionHead h2{font-size:clamp(1.9rem,3vw,2.45rem);line-height:1.1;letter-spacing:-.025em;margin:0}.muted{color:var(--muted)}.lead{font-size:1.05rem;max-width:700px}.cards,.testimonials,.insideGrid,.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow2)}.icon{width:54px;height:54px;border-radius:17px;display:grid;place-items:center;font-size:27px;margin-bottom:12px}.i1{background:var(--yellow2)}.i2{background:var(--mint2)}.i3{background:var(--sky2)}
-.product{display:grid;grid-template-columns:.88fr 1.12fr;gap:42px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:32px;padding:30px;box-shadow:var(--shadow)}.preview{background:#f0ede5;border-radius:25px;min-height:420px;display:grid;place-items:center;position:relative;overflow:hidden}.preview:before,.preview:after{content:"";position:absolute;border-radius:50%;opacity:.7}.preview:before{width:100px;height:100px;background:var(--yellow);top:-25px;left:-20px}.preview:after{width:120px;height:120px;background:var(--sky);bottom:-35px;right:-20px}.previewPage{position:relative;z-index:1;width:68%;aspect-ratio:3/4;background:#fff;border:8px solid #fff;box-shadow:0 16px 34px rgba(0,0,0,.12);transform:rotate(-4deg);padding:24px;text-align:center;border-radius:4px}.previewPage b{display:block;font-size:1.18rem;line-height:1.15;margin-bottom:18px}.animal{font-size:6rem;margin:5px 0 12px}.letters{display:flex;justify-content:center;gap:9px}.letter{width:44px;height:44px;border:2px solid #d7e0e7;border-radius:10px;display:grid;place-items:center;font-weight:950;background:#fff}.letter:first-child{background:var(--yellow2);border-color:#f2d36c}.product h2{font-size:clamp(2rem,3.5vw,2.9rem);line-height:1.05;margin:12px 0}.price{font-size:2rem;font-weight:1000;margin:17px 0 5px}.priceNote{font-size:.82rem;color:var(--muted)}.check{display:grid;gap:10px;margin:20px 0}.check div{font-weight:720}.check div:before{content:"✓";display:inline-grid;place-items:center;width:25px;height:25px;border-radius:50%;background:var(--mint);margin-right:8px}.miniTrust{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.pill{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:.78rem;font-weight:800}.buyRow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.insideGrid{grid-template-columns:repeat(4,1fr)}.insideCard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px}.insideCard .number{font-size:.78rem;font-weight:950;color:#7c8e9d}.insideCard h3{margin:8px 0 5px}
-.steps{grid-template-columns:repeat(3,1fr)}.step{position:relative;padding:26px;background:#fff;border:1px solid var(--line);border-radius:22px}.stepNum{width:38px;height:38px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:950;margin-bottom:14px}
-.reviewSummary{display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:#fff;border:1px solid var(--line);padding:18px 20px;border-radius:18px;margin-bottom:18px}.ratingBig{font-size:1.65rem;font-weight:950}.stars{letter-spacing:3px;color:#e3a62c}.reviewEmpty{padding:32px;background:#fff;border:1px dashed #cfd8df;border-radius:20px;text-align:center}.reviewCard{position:relative}.verified{display:inline-flex;align-items:center;gap:5px;font-size:.76rem;font-weight:850;background:#eaf7ef;color:#28704a;padding:5px 9px;border-radius:999px}.reviewMeta{display:flex;align-items:center;justify-content:space-between;gap:10px}.quote{font-weight:650}.reviewForm{display:grid;gap:13px}.reviewForm input,.reviewForm textarea,.reviewForm select,.form input{width:100%;padding:13px 14px;border:1px solid #dbe2e7;border-radius:13px;outline:0;background:#fff}.reviewForm textarea{min-height:120px;resize:vertical}.reviewForm input:focus,.reviewForm textarea:focus,.reviewForm select:focus,.form input:focus{border-color:#7baed1;box-shadow:0 0 0 3px #cde8ff88}.ratingPicker{display:flex;gap:5px;direction:ltr}.ratingPicker button{border:0;background:transparent;font-size:2rem;color:#d4dbe0}.ratingPicker button.active{color:#e3a62c}
-.faq{display:grid;gap:10px}.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px}.faq summary{font-weight:850;cursor:pointer}.faq p{margin-bottom:2px}.cta{background:var(--ink);color:#fff;border-radius:32px;padding:48px;text-align:center;box-shadow:var(--shadow)}.cta h2{font-size:clamp(2rem,4vw,3rem);line-height:1.05;margin:0 0 10px}.cta p{color:#d9e5ef}.footer{padding:38px 0 55px;color:#6c7c8d}.footerRow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer a{color:#50667b;font-weight:750}.footerLinks{display:flex;gap:18px;flex-wrap:wrap}
-.modalBack{position:fixed;inset:0;background:rgba(13,32,48,.68);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.modalBack.open{display:flex}.modal{width:min(720px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:28px;box-shadow:0 25px 80px rgba(0,0,0,.32);padding:26px}.modalHead{display:flex;justify-content:space-between;align-items:center;gap:15px}.close{border:0;background:#f1f4f6;width:42px;height:42px;border-radius:50%;font-size:20px}.cartItem{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:16px 0;border-bottom:1px solid var(--line)}.qty{display:flex;align-items:center;gap:8px}.qty button{border:1px solid var(--line);background:#fff;border-radius:10px;width:34px;height:34px}.total{display:flex;justify-content:space-between;font-size:1.3rem;font-weight:950;padding:20px 0}.form{display:grid;gap:12px}.form label,.reviewForm label{font-weight:800}.notice{padding:13px 15px;background:#eef8f2;border:1px solid #cce9d8;border-radius:14px;color:#315f45}.notice.warn{background:#fff7d8;border-color:#f0df9a;color:#6c5613}.toast{position:fixed;bottom:22px;left:22px;background:var(--ink);color:#fff;padding:14px 18px;border-radius:14px;transform:translateY(130px);transition:.25s;z-index:150;box-shadow:var(--shadow)}.toast.show{transform:translateY(0)}
-.reveal{opacity:0;transform:translateY(14px);transition:.55s ease}.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){.navlinks{display:none}.menuBtn{display:block}.heroGrid,.product{grid-template-columns:1fr}.heroArt{min-height:390px}.cards,.testimonials,.steps{grid-template-columns:1fr}.insideGrid{grid-template-columns:repeat(2,1fr)}.sectionHead{display:block}.sectionHead .btn{margin-top:15px}.product{padding:20px}}
-@media(max-width:560px){.announcement{font-size:.76rem}.nav{height:68px}.brand{font-size:.88rem}.brand .logo{width:38px;height:38px}.cartBtn{padding:10px 12px}.hero{padding-top:45px}.hero h1{font-size:clamp(2.65rem,14vw,4rem)}.heroArt{min-height:330px}.book{width:245px}.bookAnimal{font-size:5.3rem}.sticker{font-size:.82rem}.section{padding:58px 0}.insideGrid{grid-template-columns:1fr}.product{border-radius:24px}.preview{min-height:350px}.previewPage{width:72%}.cta{padding:34px 20px}.footerRow{display:grid;gap:12px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+:root{--bg:#08090d;--panel:#101218;--panel2:#151820;--text:#f5f5f2;--muted:#9da2ae;--line:#292d36;--accent:#b7ff35;--accent2:#6e55ff;--glow:rgba(183,255,53,.18);--r:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.55}body.lock{overflow:hidden}a{text-decoration:none;color:inherit}button,input,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1240px,92%);margin:auto}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 49.95%,rgba(255,255,255,.035) 50%,transparent 50.05%),linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px);background-size:100% 100%,100% 120px;mask-image:linear-gradient(to bottom,black,transparent 85%);z-index:-1}
+.skip{position:absolute;left:-999px;top:10px;background:#fff;color:#000;padding:10px 15px;z-index:100}.skip:focus{left:10px}
+.top{border-bottom:1px solid var(--line);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#b5bac4;padding:9px 0;text-align:center}
+header{position:sticky;top:0;z-index:50;background:rgba(8,9,13,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.82rem}.mark{width:35px;height:35px;border:1px solid #777c87;display:grid;place-items:center;position:relative}.mark:before{content:"";width:10px;height:10px;background:var(--accent);box-shadow:0 0 18px var(--accent);border-radius:50%}.links{display:flex;gap:27px;color:#a8adb7;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.links a:hover{color:var(--accent)}.navRight{display:flex;gap:10px;align-items:center}.cart,.menu{border:1px solid var(--line);background:transparent;color:#fff;padding:10px 13px;font-size:.72rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}.cart{border-color:#4a4e58}.menu{display:none}
+.hero{min-height:calc(100vh - 120px);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--accent2);filter:blur(150px);opacity:.12;right:0;top:20%}.kicker{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:900;display:flex;gap:12px;align-items:center}.kicker:before{content:"";width:42px;height:1px;background:var(--accent)}h1{font-size:clamp(4rem,8vw,8.8rem);line-height:.83;letter-spacing:-.075em;margin:25px 0 28px;font-weight:900;text-transform:uppercase}h1 span{display:block;color:transparent;-webkit-text-stroke:1px #777b84} .heroCopy p{max-width:560px;color:var(--muted);font-size:1rem}.actions{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:transparent;color:#fff;padding:14px 19px;font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;transition:.25s}.btn:hover{transform:translateY(-2px);border-color:#777}.primary{background:var(--accent);border-color:var(--accent);color:#08090d;box-shadow:0 0 35px var(--glow)}.meta{display:flex;gap:25px;margin-top:32px;color:#777d88;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}.meta b{color:#ddd}
+.heroVisual{height:650px;position:relative;display:grid;place-items:center}.orb{position:absolute;width:420px;height:420px;border-radius:50%;border:1px solid #343842;box-shadow:0 0 100px rgba(110,85,255,.12),inset 0 0 80px rgba(255,255,255,.03)}.orb:before,.orb:after{content:"";position:absolute;inset:35px;border-radius:50%;border:1px solid #262a32}.orb:after{inset:-35px;border-style:dashed;opacity:.35}.core{width:250px;height:390px;border-radius:48% 48% 38% 38%;background:linear-gradient(145deg,#30343d,#090a0d 55%,#1d2027);position:relative;box-shadow:35px 40px 90px #000,inset 0 0 50px rgba(255,255,255,.06);transform:perspective(600px) rotateY(-14deg)}.core:before{content:"";position:absolute;width:135px;height:190px;right:22px;top:50px;border-radius:50%;background:linear-gradient(135deg,#444952,#08090d);box-shadow:-12px 0 20px rgba(0,0,0,.7)}.core:after{content:"CHIRPTOPIA";position:absolute;right:34px;bottom:42px;font-size:.48rem;letter-spacing:.25em;color:#aab0ba;transform:rotate(-90deg)}.visor{position:absolute;top:78px;left:53px;width:90px;height:26px;border-radius:50%;border:1px solid #59606c;background:linear-gradient(90deg,transparent,#b7ff35,transparent);box-shadow:0 0 20px rgba(183,255,53,.25)}.tag{position:absolute;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:#8b919c}.t1{right:2%;top:20%}.t2{left:4%;bottom:24%}.t3{right:4%;bottom:13%}.line{position:absolute;background:#363a43}.l1{width:1px;height:150px;right:11%;top:11%}.l2{height:1px;width:130px;left:5%;bottom:28%}.scrollHint{position:absolute;right:0;bottom:20px;writing-mode:vertical-rl;font-size:.6rem;letter-spacing:.2em;color:#676d77;text-transform:uppercase}
+.section{padding:120px 0;border-top:1px solid var(--line)}.eyebrow{color:#707680;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase}.sectionTitle{font-size:clamp(2.8rem,5.5vw,6rem);line-height:.9;letter-spacing:-.055em;text-transform:uppercase;margin:18px 0 50px}.sectionTitle span{color:#666b74}
+.statement{display:grid;grid-template-columns:1fr 1fr;gap:70px}.statement p{font-size:clamp(1.5rem,2.7vw,2.7rem);line-height:1.1;letter-spacing:-.03em;margin:0}.statement small{color:#858b95}.grid3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.feature{padding:30px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:250px;background:linear-gradient(145deg,rgba(255,255,255,.025),transparent)}.num{font-size:.62rem;color:#777d87;letter-spacing:.2em}.feature h3{font-size:1.25rem;text-transform:uppercase;margin:65px 0 10px}.feature p{color:var(--muted);font-size:.88rem}.feature:hover{background:#11141a}.feature:hover h3{color:var(--accent)}
+.product{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.productVisual{min-height:550px;background:#0d0f14;border:1px solid var(--line);position:relative;overflow:hidden;display:grid;place-items:center}.productVisual:before{content:"";position:absolute;inset:15%;border:1px solid #2d323b;transform:rotate(8deg)}.book{width:285px;height:390px;background:linear-gradient(145deg,#e9e9e5,#9fa3aa);color:#0b0c10;position:relative;z-index:2;transform:rotate(-7deg);box-shadow:35px 40px 60px #000;border:10px solid #eee}.book:before{content:"CHIRPTOPIA";position:absolute;top:25px;left:25px;font-size:.55rem;letter-spacing:.25em;font-weight:900}.book h3{font-size:2.2rem;line-height:.85;letter-spacing:-.06em;text-transform:uppercase;position:absolute;top:80px;left:25px;margin:0}.book .shape{position:absolute;width:145px;height:145px;border:2px solid #111;border-radius:50%;right:20px;bottom:65px}.book .shape:after{content:"";position:absolute;inset:30px;background:#111;border-radius:50%}.book .foot{position:absolute;bottom:25px;left:25px;font-size:.5rem;letter-spacing:.16em}.productInfo h2{font-size:clamp(2.7rem,5vw,5.5rem);line-height:.86;letter-spacing:-.06em;text-transform:uppercase;margin:15px 0}.productInfo p{color:var(--muted);max-width:570px}.checks{display:grid;gap:11px;margin:28px 0;color:#cdd1d7;font-size:.86rem}.checks div:before{content:"+";color:var(--accent);margin-right:10px}.price{font-size:1.8rem;font-weight:900;margin:25px 0}.status{display:inline-block;border:1px solid var(--line);padding:8px 11px;color:#858b95;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase}
+.steps{display:grid;grid-template-columns:repeat(3,1fr)}.step{padding:35px;border-top:1px solid var(--line);border-left:1px solid var(--line);min-height:270px}.step:last-child{border-right:1px solid var(--line)}.step strong{font-size:3.5rem;font-weight:300;color:#4f545d}.step h3{text-transform:uppercase;font-size:1.1rem}.step p{color:var(--muted);font-size:.88rem}
+.reviews{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px}.ratingBig{font-size:3rem;font-weight:900}.stars{color:var(--accent);letter-spacing:3px}.reviewList{display:grid;gap:12px}.reviewCard{border:1px solid var(--line);padding:25px;background:#0d0f13}.reviewCard p{font-size:1.05rem}.reviewMeta{color:#777d87;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em}.verified{color:var(--accent);font-size:.65rem}.reviewEmpty{border:1px dashed var(--line);padding:35px;color:var(--muted)}
+.faq{max-width:850px}.faq details{border-top:1px solid var(--line);padding:22px 0}.faq details:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;text-transform:uppercase;font-weight:800;letter-spacing:.06em}details p{color:var(--muted);max-width:700px}
+.cta{padding:100px 0;border-top:1px solid var(--line);text-align:center}.cta h2{font-size:clamp(3rem,7vw,8rem);line-height:.82;letter-spacing:-.07em;text-transform:uppercase;margin:0 0 35px}.footer{border-top:1px solid var(--line);padding:35px 0 55px;display:flex;justify-content:space-between;gap:20px;color:#666c76;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}.footer a:hover{color:var(--accent)}
+.modalBack{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}.modalBack.open{display:flex}.modal{width:min(700px,100%);max-height:90vh;overflow:auto;background:#111319;border:1px solid #30343e;padding:28px;box-shadow:0 30px 100px #000}.modalHead{display:flex;justify-content:space-between;align-items:center}.modal h2{font-size:2rem;text-transform:uppercase;letter-spacing:-.04em}.close{border:1px solid var(--line);background:transparent;color:#fff;width:40px;height:40px}.form,.reviewForm{display:grid;gap:14px}.form label,.reviewForm label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}.form input,.reviewForm input,.reviewForm textarea{width:100%;margin-top:7px;padding:13px;background:#090a0e;border:1px solid #30343d;color:#fff;outline:0}.reviewForm textarea{min-height:130px}.notice{padding:13px;border:1px solid #3c4530;color:#c8d7b2;background:#171b13;font-size:.78rem}.notice.warn{border-color:#50462c;color:#d8c995;background:#1a1710}.cartItem{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:18px 0}.qty{display:flex;gap:8px;align-items:center}.qty button{width:32px;height:32px;background:transparent;border:1px solid var(--line);color:#fff}.total{display:flex;justify-content:space-between;font-size:1.2rem;font-weight:900;padding:20px 0}.pill{border:1px solid var(--line);padding:7px 10px;font-size:.62rem;color:#8d939d;letter-spacing:.1em;text-transform:uppercase}.ratingPicker{display:flex;gap:4px;direction:ltr}.ratingPicker button{background:transparent;border:0;color:#4b5059;font-size:1.8rem}.ratingPicker button.active{color:var(--accent)}.toast{position:fixed;bottom:22px;left:22px;background:#f5f5f2;color:#08090d;padding:13px 17px;z-index:150;transform:translateY(120px);transition:.25s;font-size:.75rem;font-weight:900;text-transform:uppercase}.toast.show{transform:none}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.links{display:none}.menu{display:block}.hero{grid-template-columns:1fr;padding:70px 0}.heroVisual{height:480px}.statement,.product,.reviews{grid-template-columns:1fr}.grid3,.steps{grid-template-columns:1fr}.step:last-child{border-right:0}.section{padding:85px 0}.product{gap:40px}.productVisual{min-height:430px}}
+@media(max-width:560px){.top{font-size:.55rem}.nav{height:68px}.brand{font-size:.67rem}.hero{min-height:auto;padding:60px 0}.heroVisual{height:390px}.orb{width:280px;height:280px}.core{width:175px;height:275px}.visor{top:55px;left:38px;width:62px}.meta{gap:12px;flex-wrap:wrap}h1{font-size:clamp(3.5rem,18vw,5.5rem)}.sectionTitle{font-size:3rem}.productVisual{min-height:360px}.book{width:220px;height:300px}.footer{flex-direction:column}.cta{padding:80px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="announcement">🌿 Screen-free play for curious kids — made for coloring, solving, exploring and creating.</div>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#" aria-label="Chirptopia home"><span class="logo">🐦</span><span>Chirptopia | Kids Activity Books</span></a>
-    <nav class="navlinks" aria-label="Primary navigation">
-      <a href="#why">Why Chirptopia</a><a href="#book">The Book</a><a href="#inside">What's Inside</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
-    </nav>
-    <div class="navActions"><button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button><button class="cartBtn" id="cartBtn" aria-label="Open cart">🛒 Cart <span id="count">0</span></button></div>
-  </div>
-  <div class="mobileMenu" id="mobileMenu"><div class="container"><a href="#why">Why Chirptopia</a><a href="#book">The Book</a><a href="#inside">What's Inside</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a></div></div>
-</header>
-
+<div class="top">Screen-free experiences for curious minds — 2026 collection</div>
+<header><div class="wrap nav">
+<a class="brand" href="#"><span class="mark"></span><span>Chirptopia</span></a>
+<nav class="links"><a href="#vision">Vision</a><a href="#book">The Book</a><a href="#inside">Experience</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a></nav>
+<div class="navRight"><button class="menu" id="menuBtn">Menu</button><button class="cart" id="cartBtn">Cart [<span id="count">0</span>]</button></div>
+</div></header>
 <main id="main">
-<section class="hero">
-  <div class="container heroGrid">
-    <div class="reveal">
-      <span class="eyebrow">✨ Less screen time • More real-world play</span>
-      <h1>Turn screen time into a <span>real adventure.</span></h1>
-      <p>Chirptopia creates playful, screen-free activity books that help kids color, solve, explore and create — one page at a time.</p>
-      <div class="actions"><a class="btn primary" href="#book">Explore the Book <span>→</span></a><a class="btn secondary" href="#inside">See What's Inside</a></div>
-      <div class="trustRow"><span>✓ Screen-free activities</span><span>✓ Print-friendly layouts</span><span>✓ Designed for curious kids</span></div>
-    </div>
-    <div class="heroArt reveal" aria-label="Illustration of the Chirptopia activity book">
-      <div class="blob"></div><div class="book"><div class="bookTop">SCREEN-FREE<br>ADVENTURES<br><small>CHIRPTOPIA</small></div><div class="bookBody"><div class="bookAnimal">🦁</div></div></div><div class="sticker s1">🎨 Create!</div><div class="sticker s2">🧩 Explore!</div>
-    </div>
-  </div>
+<section class="wrap hero">
+<div class="heroCopy reveal"><div class="kicker">A different kind of play</div><h1>Offline.<span>Future.</span></h1><p>Chirptopia turns ordinary pages into tactile adventures — designed to make coloring, solving, exploring and creating feel exciting again.</p><div class="actions"><a class="btn primary" href="#book">Explore the Book →</a><a class="btn" href="#inside">View Experience</a></div><div class="meta"><span>01 / <b>Screen-free</b></span><span>02 / <b>Print-ready</b></span><span>03 / <b>Made for kids</b></span></div></div>
+<div class="heroVisual reveal" aria-label="Abstract futuristic Chirptopia artwork"><div class="orb"></div><div class="core"><div class="visor"></div></div><span class="tag t1">PLAY / 001</span><span class="tag t2">REAL WORLD</span><span class="tag t3">CHIRPTOPIA</span><i class="line l1"></i><i class="line l2"></i><span class="scrollHint">Scroll to explore</span></div>
 </section>
-
-<section class="section" id="why">
-  <div class="container">
-    <div class="sectionHead reveal"><div><h2>Built for better offline moments</h2><p class="muted lead">The goal isn't simply to remove a screen. It's to give children something exciting to do instead.</p></div></div>
-    <div class="cards">
-      <article class="card reveal"><div class="icon i1">🧩</div><h3>Variety keeps kids engaged</h3><p class="muted">Mazes, matching, search, coloring, letters and creative challenges keep activities fresh.</p></article>
-      <article class="card reveal"><div class="icon i2">🌱</div><h3>Play without pressure</h3><p class="muted">A positive offline alternative that feels like play — not a punishment for using a device.</p></article>
-      <article class="card reveal"><div class="icon i3">👨‍👩‍👧</div><h3>Made for family time</h3><p class="muted">Many activities can become easy parent-and-child moments for talking, laughing and playing together.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="book">
-  <div class="container">
-    <div class="product reveal">
-      <div class="preview">
-        <div class="previewPage"><b>FIND THE FIRST LETTER</b><div class="animal">🦒</div><div class="letters"><span class="letter">G</span><span class="letter">R</span><span class="letter">S</span></div></div>
-      </div>
-      <div>
-        <span class="eyebrow">📖 Featured Activity Book</span>
-        <h2>Screen-Free Adventures for Kids</h2>
-        <p class="muted lead">A playful collection combining learning, creativity and problem-solving, with activities that can grow from simple warm-ups to more thoughtful challenges.</p>
-        <div class="check"><div>Great for independent or family activities</div><div>Clear, print-friendly page layouts</div><div>A mix of learning, play and creativity</div><div>Designed for screen-free routines</div></div>
-        <div class="price">$12.99</div><div class="priceNote">Current display price — update before launch if needed.</div>
-        <div class="buyRow"><button class="btn primary" id="buy">Add to Cart — Start the Adventure</button></div>
-        <div class="miniTrust"><span class="pill">Digital product</span><span class="pill" id="checkoutStatus">Checkout setup in progress</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section alt" id="inside">
-  <div class="container">
-    <div class="sectionHead reveal"><div><h2>What's inside the experience?</h2><p class="muted lead">A balanced mix of activities gives kids different ways to think, make and explore.</p></div></div>
-    <div class="insideGrid">
-      <article class="insideCard reveal"><div class="number">01</div><h3>Coloring</h3><p class="muted">Relaxing pages that invite kids to add their own style.</p></article>
-      <article class="insideCard reveal"><div class="number">02</div><h3>Mazes & Puzzles</h3><p class="muted">Simple problem-solving challenges with room to think.</p></article>
-      <article class="insideCard reveal"><div class="number">03</div><h3>Matching & Search</h3><p class="muted">Look closely, compare details and find the right answers.</p></article>
-      <article class="insideCard reveal"><div class="number">04</div><h3>Letters & Learning</h3><p class="muted">Playful activities that reinforce early learning skills.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="sectionHead reveal"><div><h2>Simple to use. Easy to enjoy.</h2><p class="muted lead">Turn a quiet afternoon, travel break or family moment into hands-on play.</p></div></div>
-    <div class="steps">
-      <article class="step reveal"><div class="stepNum">1</div><h3>Choose a moment</h3><p class="muted">Pick a few minutes of calm offline time — at home or on the go.</p></article>
-      <article class="step reveal"><div class="stepNum">2</div><h3>Print & play</h3><p class="muted">Give kids a page, some pencils or crayons, and let the activity begin.</p></article>
-      <article class="step reveal"><div class="stepNum">3</div><h3>Create & share</h3><p class="muted">Celebrate their answers, drawings and ideas together.</p></article>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="reviews">
-  <div class="container">
-    <div class="sectionHead reveal"><div><h2>What parents are saying</h2><p class="muted">Only approved customer reviews appear here. Verified purchases can receive a verified badge.</p></div><button class="btn primary" id="writeReview">Write a Review</button></div>
-    <div class="reviewSummary reveal"><div><div class="ratingBig" id="ratingAverage">No reviews yet</div><div class="stars" id="ratingStars">☆☆☆☆☆</div></div><div class="muted" id="ratingCount">Be the first customer to share your experience.</div></div>
-    <div id="reviewsList" class="testimonials"></div>
-  </div>
-</section>
-
-<section class="section alt" id="faq">
-  <div class="container">
-    <div class="sectionHead reveal"><div><h2>Frequently Asked Questions</h2><p class="muted lead">A few quick answers before you start.</p></div></div>
-    <div class="faq">
-      <details class="reveal"><summary>Is the book educational or just for fun?</summary><p class="muted">Both. Activities are designed to be playful while encouraging observation, thinking, creativity and early learning skills.</p></details>
-      <details class="reveal"><summary>Can more than one child use it?</summary><p class="muted">Yes. Shared activities work well for siblings, while coloring and writing pages are often best printed separately for each child.</p></details>
-      <details class="reveal"><summary>Is this a treatment for screen addiction?</summary><p class="muted">No. Chirptopia is an entertainment and learning product that provides offline alternatives; it is not a medical treatment.</p></details>
-      <details class="reveal"><summary>How do customer reviews work?</summary><p class="muted">Customers can submit a rating and review. Submissions are moderated before publication, and verified-purchase reviews can receive a verified badge.</p></details>
-      <details class="reveal"><summary>Is checkout available right now?</summary><p class="muted">The storefront and cart are ready, but the live payment provider and automatic digital delivery still need to be connected before accepting real orders.</p></details>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container"><div class="cta reveal"><h2>Ready for a screen-free adventure?</h2><p>Give kids something they can touch, color, solve and share.</p><button class="btn" style="background:var(--yellow);color:var(--ink)" id="ctaBuy">Get the Book</button></div></div>
-</section>
+<section class="section" id="vision"><div class="wrap"><div class="eyebrow reveal">01 — The idea</div><h2 class="sectionTitle reveal">Make <span>offline</span><br>feel new.</h2><div class="statement reveal"><p>Children do not need another screen. They need something worth reaching for.</p><small>Chirptopia creates activity books that replace passive scrolling with hands-on moments — one challenge, drawing and discovery at a time.</small></div></div></section>
+<section class="section"><div class="wrap"><div class="eyebrow reveal">02 — Why it works</div><h2 class="sectionTitle reveal">Designed<br>to engage.</h2><div class="grid3">
+<article class="feature reveal"><div class="num">01 / VARIETY</div><h3>Different every page</h3><p>Mazes, matching, search, coloring, letters and creative challenges keep the experience moving.</p></article>
+<article class="feature reveal"><div class="num">02 / TACTILE</div><h3>Hands on, screen off</h3><p>Print a page, pick up a pencil and give children something physical to explore.</p></article>
+<article class="feature reveal"><div class="num">03 / TOGETHER</div><h3>Built for moments</h3><p>Use it independently or turn a quiet afternoon into an easy parent-and-child activity.</p></article>
+</div></div></section>
+<section class="section" id="book"><div class="wrap"><div class="eyebrow reveal">03 — Featured product</div><div class="product"><div class="productVisual reveal"><div class="book"><b>CHIRPTOPIA</b><h3>SCREEN<br>FREE<br>ADVENTURES</h3><div class="shape"></div><div class="foot">COLOR / SOLVE / CREATE</div></div></div><div class="productInfo reveal"><div class="eyebrow">Digital activity book</div><h2>Screen-Free Adventures</h2><p>A modern activity collection balancing creativity, early learning and problem solving. Built to be printed and enjoyed away from a device.</p><div class="checks"><div>Independent or family-friendly activities</div><div>Clear print-ready layouts</div><div>Coloring, puzzles, matching, search and letters</div><div>Designed for screen-free routines</div></div><div class="price">$12.99</div><button class="btn primary" id="buy">Add to Cart — Start the Adventure</button><div style="margin-top:16px"><span class="status" id="checkoutStatus">Checkout setup in progress</span></div></div></div></div></section>
+<section class="section" id="inside"><div class="wrap"><div class="eyebrow reveal">04 — The experience</div><h2 class="sectionTitle reveal">Three ways<br>to <span>play.</span></h2><div class="steps"><article class="step reveal"><strong>01</strong><h3>Choose a moment</h3><p>Pick a quiet break at home, during travel or whenever a screen-free reset feels right.</p></article><article class="step reveal"><strong>02</strong><h3>Print & play</h3><p>Give kids a page and a few pencils, crayons or markers. The activity starts immediately.</p></article><article class="step reveal"><strong>03</strong><h3>Create & share</h3><p>Celebrate their ideas, answers and drawings together.</p></article></div></div></section>
+<section class="section" id="reviews"><div class="wrap"><div class="eyebrow reveal">05 — Community</div><div class="reviews"><div class="reveal"><h2 class="sectionTitle" style="margin-bottom:20px">Parents<br><span>talk.</span></h2><div class="ratingBig" id="ratingAverage">—</div><div class="stars" id="ratingStars">☆☆☆☆☆</div><p id="ratingCount" style="color:var(--muted)">No customer reviews yet.</p><button class="btn" id="writeReview">Write a Review</button></div><div class="reviewList reveal" id="reviewsList"></div></div></div></section>
+<section class="section" id="faq"><div class="wrap"><div class="eyebrow reveal">06 — Questions</div><h2 class="sectionTitle reveal">Good to<br><span>know.</span></h2><div class="faq">
+<details class="reveal"><summary>Is the book educational?</summary><p>It combines playful activities with observation, thinking, creativity and early learning skills.</p></details>
+<details class="reveal"><summary>Can more than one child use it?</summary><p>Yes. Shared activities work well for siblings; pages involving writing or coloring can also be printed separately.</p></details>
+<details class="reveal"><summary>Is it a treatment for screen addiction?</summary><p>No. Chirptopia is a learning and entertainment product that offers offline alternatives.</p></details>
+<details class="reveal"><summary>Is checkout live?</summary><p>The storefront is prepared for Lemon Squeezy, but a live checkout URL must be connected before real orders can be accepted.</p></details>
+</div></div></section>
+<section class="cta"><div class="wrap reveal"><h2>Give them<br>something real.</h2><button class="btn primary" id="ctaBuy">Get the Book →</button></div></section>
 </main>
-
-<footer>
-  <div class="container footer"><div class="footerRow"><strong>🐦 Chirptopia | Kids Activity Books</strong><span>Small books. Big adventures.</span><div class="footerLinks"><a href="#book">The Book</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a></div><span>© 2026 Chirptopia</span></div></div>
-</footer>
-
-<div class="toast" id="toast" role="status" aria-live="polite">Added to cart 🛒</div>
-
-<div class="modalBack" id="cartModal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle"><div class="modalHead"><h2 id="cartTitle">Your Cart</h2><button class="close" data-close aria-label="Close">×</button></div><div id="cartContent"></div></div></div>
-
-<div class="modalBack" id="checkoutModal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><div class="modalHead"><h2 id="checkoutTitle">Checkout</h2><button class="close" data-close aria-label="Close">×</button></div><div class="notice warn" id="checkoutNotice"><b>Payment setup is not finished.</b><br>Connect the Lemon Squeezy checkout URL in the site configuration before accepting real orders.</div><br><form class="form" id="checkoutForm"><label>Full name<input required name="name" autocomplete="name"></label><label>Email address<input required type="email" name="email" autocomplete="email"></label><label>Country<input required name="country" autocomplete="country-name"></label><button class="btn primary" type="submit">Continue to Payment</button></form></div></div>
-
-<div class="modalBack" id="reviewModal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="reviewTitle"><div class="modalHead"><h2 id="reviewTitle">Share Your Experience</h2><button class="close" data-close aria-label="Close">×</button></div><p class="muted">Purchased the book? Tell other parents what your child enjoyed. Reviews are moderated before appearing publicly.</p><form class="reviewForm" id="reviewForm"><label>Your name<input required name="name" maxlength="80" autocomplete="name" placeholder="e.g. Sarah"></label><label>Order number <span class="muted">(used later to verify your purchase)</span><input name="order_number" maxlength="80" placeholder="e.g. CH-12345"></label><div><b>Your rating</b><div class="ratingPicker" id="ratingPicker" aria-label="Rating"><button type="button" data-rating="1" aria-label="1 star">★</button><button type="button" data-rating="2" aria-label="2 stars">★</button><button type="button" data-rating="3" aria-label="3 stars">★</button><button type="button" data-rating="4" aria-label="4 stars">★</button><button type="button" data-rating="5" aria-label="5 stars">★</button></div><input type="hidden" id="ratingValue" name="rating" value="5"></div><label>Your review<textarea required name="review" maxlength="800" placeholder="What did your child enjoy?"></textarea></label><button class="btn primary" type="submit">Submit Review</button><div class="notice">Your review will be published only after moderation. A verified-purchase badge is added only after the order is confirmed.</div></form></div></div>
-
+<footer><div class="wrap footer"><span>© 2026 Chirptopia</span><span>Screen-free adventures for curious kids.</span><span><a href="#book">Product</a> · <a href="#reviews">Reviews</a> · <a href="#faq">FAQ</a></span></div></footer>
+<div class="toast" id="toast">Added to cart</div>
+<div class="modalBack" id="cartModal" aria-hidden="true"><div class="modal"><div class="modalHead"><h2>Your Cart</h2><button class="close" data-close>×</button></div><div id="cartContent"></div></div></div>
+<div class="modalBack" id="checkoutModal" aria-hidden="true"><div class="modal"><div class="modalHead"><h2>Checkout</h2><button class="close" data-close>×</button></div><div class="notice warn" id="checkoutNotice"><b>Payment setup is not finished.</b><br>Connect the Lemon Squeezy checkout URL before accepting real orders.</div><br><form class="form" id="checkoutForm"><label>Full name<input required name="name" autocomplete="name"></label><label>Email address<input required type="email" name="email" autocomplete="email"></label><label>Country<input required name="country" autocomplete="country-name"></label><button class="btn primary" type="submit">Continue to Payment</button></form></div></div>
+<div class="modalBack" id="reviewModal" aria-hidden="true"><div class="modal"><div class="modalHead"><h2>Share Your Experience</h2><button class="close" data-close>×</button></div><p style="color:var(--muted)">Reviews are moderated before publication.</p><form class="reviewForm" id="reviewForm"><label>Your name<input required name="name" maxlength="80"></label><label>Order number <span style="color:#777">(optional until verification is connected)</span><input name="order_number" maxlength="80"></label><div><label>Your rating</label><div class="ratingPicker" id="ratingPicker"><button type="button" data-rating="1">★</button><button type="button" data-rating="2">★</button><button type="button" data-rating="3">★</button><button type="button" data-rating="4">★</button><button type="button" data-rating="5">★</button></div><input type="hidden" id="ratingValue" name="rating" value="5"></div><label>Your review<textarea required name="review" maxlength="800"></textarea></label><button class="btn primary" type="submit">Submit Review</button></form></div></div>
 <script>
 const PRICE=12.99;
-// Paste the published Lemon Squeezy checkout URL here when your product is ready.
-// Example: https://your-store.lemonsqueezy.com/checkout/buy/VARIANT_ID
 const CHECKOUT_URL="";
 let qty=Number(localStorage.getItem("chirptopia_cart_qty")||0);
 const REVIEWS_CONFIG={supabaseUrl:"",supabaseAnonKey:"",table:"reviews"};
-const $=s=>document.querySelector(s);
-const countEl=$("#count"),toast=$("#toast"),cartModal=$("#cartModal"),checkoutModal=$("#checkoutModal"),reviewModal=$("#reviewModal"),cartContent=$("#cartContent"),mobileMenu=$("#mobileMenu"),menuBtn=$("#menuBtn");
-countEl.textContent=qty;
-function toastMsg(t){toast.textContent=t;toast.classList.add("show");clearTimeout(window.__toast);window.__toast=setTimeout(()=>toast.classList.remove("show"),2200)}
-function stars(n){n=Math.max(0,Math.min(5,Number(n)||0));return "★".repeat(n)+"☆".repeat(5-n)}
-function saveCart(){localStorage.setItem("chirptopia_cart_qty",String(qty));countEl.textContent=qty}
-function renderCart(){
- if(!qty){cartContent.innerHTML='<p class="muted">Your cart is empty.</p><button class="btn primary" data-close>Continue shopping</button>';bindClose();return}
- cartContent.innerHTML='<div class="cartItem"><div><b>Screen-Free Adventures for Kids</b><div class="muted">$'+PRICE.toFixed(2)+' per copy</div></div><div class="qty"><button onclick="changeQty(-1)" aria-label="Decrease quantity">−</button><b>'+qty+'</b><button onclick="changeQty(1)" aria-label="Increase quantity">+</button></div></div><div class="total"><span>Total</span><span>$'+(qty*PRICE).toFixed(2)+'</span></div><button class="btn primary" style="width:100%" onclick="openCheckout()">Continue to Checkout</button>'}
-function changeQty(n){qty=Math.max(0,qty+n);saveCart();renderCart()}
-function add(){qty++;saveCart();toastMsg("Added to cart 🛒")}
-function openCart(){renderCart();cartModal.classList.add("open");cartModal.setAttribute("aria-hidden","false");document.body.classList.add("lock")}
-function openCheckout(){if(!qty){toastMsg("Add the book to your cart first");return}cartModal.classList.remove("open");checkoutModal.classList.add("open");checkoutModal.setAttribute("aria-hidden","false");updateCheckoutUI()}
+const $=s=>document.querySelector(s),toast=$("#toast"),count=$("#count"),cartModal=$("#cartModal"),checkoutModal=$("#checkoutModal"),reviewModal=$("#reviewModal"),mobile=document.querySelector(".links");
+count.textContent=qty;
+function toastMsg(t){toast.textContent=t;toast.classList.add("show");clearTimeout(window.__t);window.__t=setTimeout(()=>toast.classList.remove("show"),2200)}
+function save(){localStorage.setItem("chirptopia_cart_qty",qty);count.textContent=qty}
+function renderCart(){if(!qty){$("#cartContent").innerHTML='<p style="color:#9da2ae">Your cart is empty.</p>';bindClose();return}$("#cartContent").innerHTML='<div class="cartItem"><div><b>Screen-Free Adventures for Kids</b><div style="color:#777">$'+PRICE.toFixed(2)+' per copy</div></div><div class="qty"><button onclick="changeQty(-1)">−</button><b>'+qty+'</b><button onclick="changeQty(1)">+</button></div></div><div class="total"><span>Total</span><span>$'+(qty*PRICE).toFixed(2)+'</span></div><button class="btn primary" style="width:100%" onclick="openCheckout()">Continue to Checkout</button>'}
+function changeQty(n){qty=Math.max(0,qty+n);save();renderCart()}
+function add(){qty++;save();toastMsg("Added to cart")}
+function openCart(){renderCart();cartModal.classList.add("open");document.body.classList.add("lock")}
+function openCheckout(){if(!qty){toastMsg("Add the book first");return}cartModal.classList.remove("open");checkoutModal.classList.add("open");document.body.classList.add("lock");updateCheckoutUI()}
 function closeAll(){document.querySelectorAll(".modalBack").forEach(m=>{m.classList.remove("open");m.setAttribute("aria-hidden","true")});document.body.classList.remove("lock")}
 function bindClose(){document.querySelectorAll("[data-close]").forEach(x=>x.onclick=closeAll)}
 $("#buy").onclick=add;$("#ctaBuy").onclick=()=>{add();location.hash="book"};$("#cartBtn").onclick=openCart;bindClose();
-document.querySelectorAll(".modalBack").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)closeAll()}));
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
-function updateCheckoutUI(){
- const ready=Boolean(CHECKOUT_URL);
- const notice=$("#checkoutNotice");
- const status=$("#checkoutStatus");
- if(ready){
-   notice.className="notice";
-   notice.innerHTML="<b>Secure checkout is ready.</b><br>You’ll continue to Lemon Squeezy to complete payment and receive the digital product.";
-   status.textContent="Secure checkout enabled";
- }else{
-   notice.className="notice warn";
-   notice.innerHTML="<b>Payment setup is not finished.</b><br>Connect the Lemon Squeezy checkout URL in the site configuration before accepting real orders.";
-   status.textContent="Checkout setup in progress";
- }
-}
-function buildCheckoutUrl(form){
- const url=new URL(CHECKOUT_URL);
- const data=new FormData(form);
- const email=String(data.get("email")||"").trim();
- const name=String(data.get("name")||"").trim();
- const country=String(data.get("country")||"").trim();
- if(email)url.searchParams.set("checkout[email]",email);
- if(name)url.searchParams.set("checkout[name]",name);
- if(country)url.searchParams.set("checkout[billing_address][country]",country);
- return url.toString();
-}
-$("#checkoutForm").addEventListener("submit",e=>{
- e.preventDefault();
- if(!CHECKOUT_URL){toastMsg("Checkout is not connected yet.");return}
- window.location.href=buildCheckoutUrl(e.target);
-});
-menuBtn.onclick=()=>{const open=mobileMenu.classList.toggle("open");menuBtn.setAttribute("aria-expanded",String(open));menuBtn.textContent=open?"×":"☰"};
-mobileMenu.querySelectorAll("a").forEach(a=>a.onclick=()=>{mobileMenu.classList.remove("open");menuBtn.setAttribute("aria-expanded","false");menuBtn.textContent="☰"});
-
-function renderReviews(reviews){
- const list=$("#reviewsList");
- if(!reviews.length){list.innerHTML='<div class="reviewEmpty" style="grid-column:1/-1"><div class="stars">☆☆☆☆☆</div><h3>No customer reviews yet</h3><p class="muted">Be one of the first parents to share an honest experience.</p><button class="btn secondary" onclick="openReview()">Write the first review</button></div>';$("#ratingAverage").textContent="No reviews yet";$("#ratingStars").textContent="☆☆☆☆☆";$("#ratingCount").textContent="Be the first customer to share your experience.";return}
- const avg=reviews.reduce((a,r)=>a+Number(r.rating),0)/reviews.length;$("#ratingAverage").textContent=avg.toFixed(1)+" / 5";$("#ratingStars").textContent=stars(Math.round(avg));$("#ratingCount").textContent=reviews.length+" approved review"+(reviews.length===1?"":"s");
- list.innerHTML=reviews.map(r=>'<article class="card reviewCard"><div class="reviewMeta"><span class="stars">'+stars(r.rating)+'</span>'+(r.verified_purchase?'<span class="verified">✓ Verified purchase</span>':'')+'</div><p class="quote">“'+escapeHtml(r.review_text)+'”</p><div class="muted"><b>'+escapeHtml(r.display_name)+'</b> · '+new Date(r.created_at).toLocaleDateString("en-US",{year:"numeric",month:"short"})+'</div></article>').join("");
-}
+document.querySelectorAll(".modalBack").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)closeAll()}));document.addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
+function updateCheckoutUI(){const ready=Boolean(CHECKOUT_URL),n=$("#checkoutNotice"),s=$("#checkoutStatus");if(ready){n.className="notice";n.innerHTML="<b>Secure checkout is ready.</b><br>You’ll continue to Lemon Squeezy to complete payment.";s.textContent="Secure checkout enabled"}else{s.textContent="Checkout setup in progress"}}
+function buildCheckoutUrl(form){const u=new URL(CHECKOUT_URL),d=new FormData(form);const email=String(d.get("email")||"").trim(),name=String(d.get("name")||"").trim(),country=String(d.get("country")||"").trim();if(email)u.searchParams.set("checkout[email]",email);if(name)u.searchParams.set("checkout[name]",name);if(country)u.searchParams.set("checkout[billing_address][country]",country);return u.toString()}
+$("#checkoutForm").addEventListener("submit",e=>{e.preventDefault();if(!CHECKOUT_URL){toastMsg("Checkout is not connected yet");return}location.href=buildCheckoutUrl(e.target)});
+$("#writeReview").onclick=()=>{reviewModal.classList.add("open");document.body.classList.add("lock")};
+document.querySelectorAll("#ratingPicker button").forEach(b=>b.onclick=()=>{const n=+b.dataset.rating;$("#ratingValue").value=n;document.querySelectorAll("#ratingPicker button").forEach(x=>x.classList.toggle("active",+x.dataset.rating<=n))});document.querySelectorAll("#ratingPicker button").forEach(b=>b.classList.add("active"));
+function stars(n){return "★".repeat(Math.round(n))+"☆".repeat(5-Math.round(n))}
 function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-async function loadReviews(){
- if(!REVIEWS_CONFIG.supabaseUrl||!REVIEWS_CONFIG.supabaseAnonKey){renderReviews([]);return}
- try{const url=REVIEWS_CONFIG.supabaseUrl.replace(/\/$/,"")+"/rest/v1/"+REVIEWS_CONFIG.table+"?select=display_name,rating,review_text,verified_purchase,created_at&status=eq.approved&order=created_at.desc";const res=await fetch(url,{headers:{apikey:REVIEWS_CONFIG.supabaseAnonKey,Authorization:"Bearer "+REVIEWS_CONFIG.supabaseAnonKey}});if(!res.ok)throw new Error("Review service unavailable");renderReviews(await res.json())}catch(e){renderReviews([]);toastMsg("Reviews are temporarily unavailable")}}
-function openReview(){reviewModal.classList.add("open");reviewModal.setAttribute("aria-hidden","false");document.body.classList.add("lock")}
-$("#writeReview").onclick=openReview;
-document.querySelectorAll("#ratingPicker button").forEach(btn=>btn.onclick=()=>{const n=Number(btn.dataset.rating);$("#ratingValue").value=n;document.querySelectorAll("#ratingPicker button").forEach(b=>b.classList.toggle("active",Number(b.dataset.rating)<=n))});
-document.querySelectorAll("#ratingPicker button").forEach(b=>b.classList.add("active"));
-$("#reviewForm").addEventListener("submit",async e=>{
- e.preventDefault();
- if(!REVIEWS_CONFIG.supabaseUrl||!REVIEWS_CONFIG.supabaseAnonKey){toastMsg("Review publishing will be enabled after the review backend is connected.");return}
- const f=new FormData(e.target);const payload={display_name:String(f.get("name")||"").trim(),order_number:String(f.get("order_number")||"").trim()||null,rating:Number(f.get("rating")),review_text:String(f.get("review")||"").trim(),status:"pending",verified_purchase:false};
- try{const url=REVIEWS_CONFIG.supabaseUrl.replace(/\/$/,"")+"/rest/v1/"+REVIEWS_CONFIG.table;const res=await fetch(url,{method:"POST",headers:{apikey:REVIEWS_CONFIG.supabaseAnonKey,Authorization:"Bearer "+REVIEWS_CONFIG.supabaseAnonKey,"Content-Type":"application/json","Prefer":"return=minimal"},body:JSON.stringify(payload)});if(!res.ok)throw new Error("submit failed");e.target.reset();$("#ratingValue").value=5;document.querySelectorAll("#ratingPicker button").forEach(b=>b.classList.add("active"));closeAll();toastMsg("Thank you! Your review was submitted for moderation.");loadReviews()}catch(err){toastMsg("We couldn't submit the review. Please try again.")}});
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.08});
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
-updateCheckoutUI();
-loadReviews();
+function renderReviews(rs){const list=$("#reviewsList");if(!rs.length){list.innerHTML='<div class="reviewEmpty"><div class="stars">☆☆☆☆☆</div><h3>No customer reviews yet</h3><p>Be one of the first parents to share an honest experience.</p></div>';$("#ratingAverage").textContent="—";$("#ratingStars").textContent="☆☆☆☆☆";return}const avg=rs.reduce((a,r)=>a+Number(r.rating),0)/rs.length;$("#ratingAverage").textContent=avg.toFixed(1)+"/5";$("#ratingStars").textContent=stars(avg);$("#ratingCount").textContent=rs.length+" approved review"+(rs.length===1?"":"s");list.innerHTML=rs.map(r=>'<article class="reviewCard"><div class="reviewMeta">'+stars(r.rating)+' · '+(r.verified_purchase?'<span class="verified">Verified purchase</span>':'')+'</div><p>“'+escapeHtml(r.review_text)+'”</p><div class="reviewMeta">'+escapeHtml(r.display_name)+'</div></article>').join("")}
+async function loadReviews(){if(!REVIEWS_CONFIG.supabaseUrl||!REVIEWS_CONFIG.supabaseAnonKey){renderReviews([]);return}try{const u=REVIEWS_CONFIG.supabaseUrl.replace(/\/$/,"")+"/rest/v1/"+REVIEWS_CONFIG.table+"?select=display_name,rating,review_text,verified_purchase,created_at&status=eq.approved&order=created_at.desc",r=await fetch(u,{headers:{apikey:REVIEWS_CONFIG.supabaseAnonKey,Authorization:"Bearer "+REVIEWS_CONFIG.supabaseAnonKey}});if(!r.ok)throw 0;renderReviews(await r.json())}catch(e){renderReviews([])}}
+$("#reviewForm").addEventListener("submit",async e=>{e.preventDefault();if(!REVIEWS_CONFIG.supabaseUrl||!REVIEWS_CONFIG.supabaseAnonKey){toastMsg("Review backend is not connected yet");return}const f=new FormData(e.target),p={display_name:String(f.get("name")||"").trim(),order_number:String(f.get("order_number")||"").trim()||null,rating:+f.get("rating"),review_text:String(f.get("review")||"").trim(),status:"pending",verified_purchase:false};try{const u=REVIEWS_CONFIG.supabaseUrl.replace(/\/$/,"")+"/rest/v1/"+REVIEWS_CONFIG.table,r=await fetch(u,{method:"POST",headers:{apikey:REVIEWS_CONFIG.supabaseAnonKey,Authorization:"Bearer "+REVIEWS_CONFIG.supabaseAnonKey,"Content-Type":"application/json","Prefer":"return=minimal"},body:JSON.stringify(p)});if(!r.ok)throw 0;closeAll();e.target.reset();toastMsg("Review submitted for moderation");loadReviews()}catch(e){toastMsg("Could not submit review")}})
+const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.08});document.querySelectorAll(".reveal").forEach(x=>ob.observe(x));
+updateCheckoutUI();loadReviews();
 </script>
-</body>
-</html>
+</body></html>
